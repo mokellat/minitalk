@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:05:45 by mokellat          #+#    #+#             */
-/*   Updated: 2021/06/16 12:01:51 by mokellat         ###   ########.fr       */
+/*   Updated: 2021/06/18 17:17:05 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <signal.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 void	ft_putstr(char *s);
 void	ft_putnbr(int nb);

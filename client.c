@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:07:42 by mokellat          #+#    #+#             */
-/*   Updated: 2021/06/17 21:35:07 by mokellat         ###   ########.fr       */
+/*   Updated: 2021/06/18 17:30:43 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,6 @@ int	*str_to_bin(char *str)
 		}
 		k += 8;
 		i++;
-	}
-	for(i = 0; i < lenght * 8; i++)
-	{
-		printf("%d", binary[i]);
-		if((i + 1) % 8 == 0 && i != 0)
-			printf(" ");
 	}
 	return (binary);
 }
