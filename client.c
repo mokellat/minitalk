@@ -6,7 +6,7 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:07:42 by mokellat          #+#    #+#             */
-/*   Updated: 2021/06/18 17:30:43 by mokellat         ###   ########.fr       */
+/*   Updated: 2021/06/18 20:28:19 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,22 @@ int	main(int argc, char **argv)
 	while(++i < (8 * (int)ft_strlen(argv[2])))
 	{
 		if (binary[i] == 1)
-			kill(ft_atoi(argv[1]), SIGUSR1);
+		{
+			if(kill(ft_atoi(argv[1]), SIGUSR1) == -1)
+			{
+				ft_putstr("the message faced a problem");
+				exit(EXIT_FAILURE);
+			}
+		}
 		else
-			kill(ft_atoi(argv[1]), SIGUSR2);
+		{
+			if(kill(ft_atoi(argv[1]), SIGUSR2) == -1)
+			{
+				ft_putstr("the message faced a problem");
+				exit(EXIT_FAILURE);
+			}
+		}
 		usleep(100);
 	}
+	ft_putstr("message sent");
 }
