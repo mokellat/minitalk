@@ -6,18 +6,18 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:07:42 by mokellat          #+#    #+#             */
-/*   Updated: 2021/06/18 21:48:16 by mokellat         ###   ########.fr       */
+/*   Updated: 2021/07/01 15:53:08 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	*str_to_bin(char *str)
+unsigned char	*str_to_bin(char *str)
 {
 	int	i;
 	int	lenght;
-	int	val;
-	int	*binary;
+	unsigned char	val;
+	unsigned char	*binary;
 	int	j;
 	int	k;
 
@@ -25,13 +25,13 @@ int	*str_to_bin(char *str)
 	j = 0;
 	k = 8;
 	lenght = ft_strlen(str);
-	binary = (int *)malloc(8 * lenght);
+	binary = (unsigned char *)malloc(8 * lenght);
 	while(i < 8 * lenght)
 		binary[i++] = 0;
 	i = 0;
 	while(i < lenght)
 	{
-		val = (int)str[i];
+		val = str[i];
 		j = k - 1;
 		while(val != 0)
 		{
@@ -47,7 +47,7 @@ int	*str_to_bin(char *str)
 
 int	main(int argc, char **argv)
 {
-	int *binary;
+	unsigned char *binary;
 	int	i;
 
 	i = -1;
