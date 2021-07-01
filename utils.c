@@ -74,3 +74,13 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
+
+int ft_pow(int base, int exponent)
+{
+	int	result;
+
+	result = 1;
+	while (exponent--)
+		result = result * base;
+	return (result);
+}

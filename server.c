@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "minitalk.h"
+
 char n;
 int i;
 
 void	func(int nb)
 {
 	if (nb == SIGUSR1)
-		n += pow(2, i);
+		n += ft_pow(2, i);
 	i--;
 	if (i == -1)
 	{
