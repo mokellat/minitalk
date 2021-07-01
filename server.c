@@ -6,14 +6,14 @@
 /*   By: mokellat <mokellat@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 09:19:02 by mokellat          #+#    #+#             */
-/*   Updated: 2021/06/18 20:13:25 by mokellat         ###   ########.fr       */
+/*   Updated: 2021/07/01 20:15:16 by mokellat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-char n;
-int i;
+char	n;
+int		i;
 
 void	func(int nb)
 {
@@ -23,8 +23,6 @@ void	func(int nb)
 	if (i == -1)
 	{
 		write(1, &n, 1);
-		if(n == '\0')
-			write(1, "\n", 1);
 		n = 0;
 		i = 7;
 	}
