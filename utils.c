@@ -14,7 +14,7 @@
 
 void	ft_putstr(char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (s)
@@ -55,7 +55,7 @@ int	ft_atoi(const char *str)
 
 size_t	ft_strlen(const char *str)
 {
-	size_t length;
+	size_t	length;
 
 	length = 0;
 	while (str[length])
@@ -65,7 +65,7 @@ size_t	ft_strlen(const char *str)
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)
@@ -75,7 +75,7 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-int ft_pow(int base, int exponent)
+int	ft_pow(int base, int exponent)
 {
 	int	result;
 

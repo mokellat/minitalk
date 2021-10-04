@@ -15,7 +15,7 @@ $(CLIENT): $(SRCS) client.c
 bonus: all
 
 clean:
-	rm -rf client server
+	rm -rf client server *.dSYM
 
 fclean: clean
 

@@ -32,11 +32,11 @@ int	main(void)
 {
 	i = 7;
 	n = 0;
-	signal(SIGUSR1, func);
-	signal(SIGUSR2, func);
 	ft_putstr("the PID is : ");
 	ft_putnbr(getpid());
 	write(1, "\n", 1);
+	signal(SIGUSR1, func);
+	signal(SIGUSR2, func);
 	while (1)
 	{
 		pause();

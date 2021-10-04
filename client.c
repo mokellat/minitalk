@@ -52,24 +52,19 @@ unsigned char	*str_to_bin(char *str)
 	return (binary);
 }
 
-void	conditions(unsigned char *binary, char **argv, int i)
+int	conditions(unsigned char *binary, char **argv, int i)
 {
 	if (binary[i] == 1)
 	{
 		if (kill(ft_atoi(argv[1]), SIGUSR1) == -1)
-		{
-			ft_putstr("The message faced a problem");
-			exit(EXIT_FAILURE);
-		}
+			return (0);
 	}
 	else
 	{
 		if (kill(ft_atoi(argv[1]), SIGUSR2) == -1)
-		{
-			ft_putstr("The message faced a problem");
-			exit(EXIT_FAILURE);
-		}
+			return (0);
 	}
+	return (1);
 }
 
 int	main(int argc, char **argv)
@@ -86,8 +81,14 @@ int	main(int argc, char **argv)
 	binary = str_to_bin(argv[2]);
 	while (++i < (8 * (int)ft_strlen(argv[2])))
 	{
-		conditions(binary, argv, i);
+		if (!conditions(binary, argv, i))
+		{
+			ft_putstr("The message faced a problem");
+			free(binary);
+			exit(EXIT_FAILURE);
+		}
 		usleep(100);
 	}
 	ft_putstr("Message sent successfully");
+	system("leaks client");
 }

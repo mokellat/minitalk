@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-int		ft_intlen(int n)
+int	ft_intlen(int n)
 {
 	int		i;
 	long	nbr;
@@ -47,7 +47,7 @@ void	ft_putchar(char c)
 
 void	ft_putnbr(int nb)
 {
-	unsigned int n;
+	unsigned int	n;
 
 	n = nb;
 	if (nb < 0)
