@@ -12,12 +12,11 @@
 
 #include "minitalk.h"
 
-
 void	func(int nb)
 {
 	static char	n = 0;
 	static int	i = 7;
-	
+
 	if (nb == SIGUSR1)
 		n += ft_pow(2, i);
 	i--;
